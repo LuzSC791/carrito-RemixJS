@@ -1,0 +1,45 @@
+h3{
+    color: rgb(105, 103, 103);
+    margin-bottom: 1%;
+}
+
+.containerCatalogue{
+    display: flex;
+}
+
+.containerCards{
+    width: 60%;
+    border: 2px solid rebeccapurple;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    overflow-y:auto;
+}
+
+img{
+    width: 15%;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.textContainer{
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    background-color:  rgb(217, 212, 212);
+    border-radius: 10px;
+    padding: 2% 2% 2% 1%;
+    min-width: 70%;
+}
+
+.btnAdd{
+    margin: 1%;
+    background-color: rgb(6, 34, 246);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}

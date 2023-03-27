@@ -1,0 +1,40 @@
+.imgTrolley{
+    width: 20%;
+}
+
+.btnAddTrolley{
+    width: 60%;
+    border: 2px solid rebeccapurple;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add{
+    background-color: transparent;
+    color: orangered;
+}
+
+.minus{
+    background-color: transparent;
+    color: rgb(238, 246, 6);
+}
+
+.delete{
+    background-color: transparent;
+    color: red;
+}
+
+.textTrolley{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    background-color:  rgb(217, 212, 212);
+    border-radius: 10px;
+}
+
+.dataTrolley{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
