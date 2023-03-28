@@ -15,8 +15,7 @@ export default function Catalogue ({onAddProduct}) {
 
   const [view, setView] = useState([]);
   const onProductView = (item) =>{
-    if(view.length === 0)
-    setView(item)
+      setView(item)
   }
 
   return (

@@ -9,7 +9,7 @@ h3{
 
 .containerCards{
     width: 60%;
-    height: 550px;
+    height: 540px;
     display: flex;
     flex-direction: column;
     overflow-y:auto;
@@ -24,6 +24,7 @@ h3{
 .cards{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 .textContainer{
     margin: 1%;
@@ -49,7 +50,6 @@ h3{
     margin: 2%;
 }
 
-
 .containerView{
     display: flex;
     flex-direction: column;
@@ -58,7 +58,6 @@ h3{
     width: 40%;
     margin-top: 6%;
     justify-content: space-between;
-    /* border: 2px solid rebeccapurple; */
 }
 
 .textView{

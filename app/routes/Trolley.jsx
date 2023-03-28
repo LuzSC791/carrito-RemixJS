@@ -7,16 +7,17 @@ export default function Trolley({onNumProducts, deploy}) {
   const [productAdd, setProductAdd] = useState([])
   const [counter, setCounter] = useState([])
   const [totalPro, setTotalPro] = useState([])
+  
   const addProduct = (addItem) => {
-    productAdd.map(p =>{
-      if(p.id === addItem.id) return;
-    })
+    const itemRep = productAdd.map(p => {return p.id})
+    if(itemRep.includes(addItem.id)) return alert("El articulo ya fue ingresado al carrito");
 
     const aux = addItem.num * addItem.price
     setProductAdd([addItem, ...productAdd])
     setTotalPro([aux, ...totalPro])
     setCounter([addItem.num, ...counter])
   }
+
   const counterAdd = (id) => setProductAdd(productAdd.map((p) => id === p.id ? {...p,num:p.num+1} : p))
 
   const counterMinus =(id, total) =>{
@@ -64,7 +65,10 @@ export default function Trolley({onNumProducts, deploy}) {
                 </>
               )
             })}
-          <div className="total"><span><b>TOTAL ${count}</b></span></div>
+            {
+
+            count === 0 ? <div className="total"><span><b>No hay articulos</b></span></div> :<div className="total"><span><b>TOTAL ${count}</b></span></div>
+            }
           </div>
         }
         <Catalogue onAddProduct = {addProduct}/>
