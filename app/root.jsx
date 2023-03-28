@@ -9,7 +9,6 @@ import {
 import Trolley from "./routes/Trolley"
 import globalStyles from '~/styles/index.css'
 import catalogueStyles from '~/styles/catalogue.css'
-import viewStyles from '~/styles/viewProduct.css'
 import trolleyStyles from '~/styles/trolley.css'
 import {FaShoppingCart} from 'react-icons/fa'
 import { useState } from "react";
@@ -19,7 +18,7 @@ export const meta = () => ({
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
 });
-// rafc
+
 export const links = () =>([
   {
     rel:'stylesheet',
@@ -28,10 +27,6 @@ export const links = () =>([
   {
     rel:'stylesheet',
     href: catalogueStyles
-  },
-  {
-    rel:'stylesheet',
-    href: viewStyles
   },
   {
     rel:'stylesheet',
@@ -49,7 +44,6 @@ export default function App() {
   const deployTrolley = () =>{
     setDeploy(!deploy)
   }
-  console.log(deploy);
 
   return (
     <html lang="en">
@@ -65,14 +59,8 @@ export default function App() {
             <FaShoppingCart className="trolleyNumber" onClick={deployTrolley} size={25}/>
           </div>
         </div>
-            {
-                deploy && <Trolley onNumProducts={numberProducts}/>
-            }
-
-          {/* <div className="container">
-            <Catalogue/>
-            <ViewProduct/>
-          </div> */}
+            <Trolley onNumProducts={numberProducts}
+              deploy = {deploy}/>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
